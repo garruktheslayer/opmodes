@@ -151,6 +151,8 @@ public class PushBotHardware extends OpMode
         v_servo_right_hand = hardwareMap.servo.get ("right_hand");
         v_servo_right_hand.setPosition (l_hand_position);
 
+        
+
     } // PushBotHardware::init
 
     //--------------------------------------------------------------------------
