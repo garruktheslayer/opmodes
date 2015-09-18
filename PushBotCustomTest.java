@@ -146,6 +146,7 @@ public class PushBotCustomTest extends PushBotTelemetry
         telemetry.addData ("GP2 ", "Left: " + l_gp2_left_stick_y);
         telemetry.addData ("GP2 ", "X: " + gamepad2.x);
         telemetry.addData ("GP2 ", "Y: " + gamepad2.b);
+        telemetry.addData ("Optical Distance ", "sensor: " + v_sensor_optical_distance_sensor.getLightDetected());
 
     } // PushBotManual::loop
 

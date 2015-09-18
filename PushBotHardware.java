@@ -3,7 +3,10 @@ package com.qualcomm.ftcrobotcontroller.opmodes;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorController;
+import com.qualcomm.robotcore.hardware.DeviceInterfaceModule;
+import com.qualcomm.robotcore.hardware.OpticalDistanceSensor;
 import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.UltrasonicSensor;
 import com.qualcomm.robotcore.util.Range;
 
 //------------------------------------------------------------------------------
@@ -73,6 +76,9 @@ public class PushBotHardware extends OpMode
     // This class member manages the aspects of the right hand servo.
     //--------
     Servo v_servo_right_hand;
+
+    DeviceInterfaceModule v_sensor_controller;
+    OpticalDistanceSensor v_sensor_optical_distance_sensor;
 
     //--------------------------------------------------------------------------
     //
@@ -151,7 +157,8 @@ public class PushBotHardware extends OpMode
         v_servo_right_hand = hardwareMap.servo.get ("right_hand");
         v_servo_right_hand.setPosition (l_hand_position);
 
-        
+        DeviceInterfaceModule v_sensor_controller = hardwareMap.deviceInterfaceModule.get("sensor_controller");
+        OpticalDistanceSensor v_sensor_optical_distance_sensor = hardwareMap.opticalDistanceSensor.get("optical_distance_sensor");
 
     } // PushBotHardware::init
 
